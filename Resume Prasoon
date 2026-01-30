@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[scale=0.90]{geometry} % slightly smaller margins to reduce space
+\usepackage{url}
+\usepackage{parskip}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{titlesec}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt} % tighter spacing around sections
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{fontawesome5}
+\usepackage{anyfontsize}
+\pagestyle{empty}
+\newenvironment{jobshort}[2]
+  {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+      \textbf{#1} & \hfill & #2\\[-6pt] % reduced vertical spacing here
+    \end{tabularx}
+  }
+  {}
+\begin{document}
+\fontsize{11.5pt}{13pt}\selectfont
+\sloppy
+% Header
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\LARGE{Prasoon Mishra} \\
+\href{https://github.com/darthlyvading}{\raisebox{-0.05\height}\faGithub\ GitHub} \quad | \quad
+\href{https://shorturl.at/nHsmT}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \quad | \quad
+\href{mailto:mishra.prasoon98@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ mishra.prasoon98@gmail.com} \quad | \quad
+\href{tel:+7999854901}{\raisebox{-0.05\height}\faMobile\ +7999854901}
+\end{tabularx}
+% reduced space after header
+ 
+\section{Profile}
+Oracle PL/SQL Developer with 4 years of experience at Accenture
+Expert at architecting high-performance, reliable applications using Agile methodology and driving continuous improvement.
+Skilled in CI/CD pipeline orchestration, Git version control and Azure cloud deployments.
+ 
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming Languages:} & Java, Java EE, PL/SQL, Oracle SQL, C/C++ \\
+ 
+\textbf{Databases:} & Oracle SQL, MySQL \\
+\textbf{Tools:} & GitHub, Azure, Jenkins, SVN, PuTTY, WinSCP \\
+\textbf{Soft Skills:} & \parbox[t]{\hsize}{Exceptional business communication, stakeholder management, root-cause \\debugging, end-to-end accountability} \\
+\end{tabularx}
+ 
+% reduced space after skills
+ 
+\section{Professional Experience}
+\begin{jobshort}{Software Engineering Analyst}{Apr 2024 – Present}
+\begin{itemize}[topsep=3pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
+  \item \textbf{Spearheading a security initiative} to remediate Dependabot vulnerabilities flagged by GitHub, reducing vulnerabilities by \textbf{60\%} and strengthening application security.
+  \item \textbf{Architected and delivered end-to-end government compliance integration platform},\\ orchestrating data flow between client applications, third-party vendors, and government portals.\\
+    \textbf{Eliminated 100\%} manual processing, reduced data errors to zero, and achieved \textbf{a 3 fold performance \\improvement}.
+  \item \textbf{Built and deployed automated data processing pipeline} using Java 8+ Streams, Apache Commons CSV, and custom SQL builders,
+    \textbf{cut processing time from 7 days to less than 5 minutes} and processed \textbf{ over 10,000 records/month}.
+  \item \textbf{Systematically tuned 50+ SQL queries and stored procedures} with Oracle SQL Tuning Advisor and JDBC batching, delivering \textbf{40\% faster query execution} and decreased database load.
+  \item \textbf{Developed a comprehensive transaction monitoring system} leveraging Oracle DBMS\_SCHEDULER, Java Quartz, and Unix cron jobs;\\
+    \textbf{minimized manual oversight by 40\%} across \textbf{50+ client accounts} with real-time alerts.
+\end{itemize}
+\end{jobshort}
+% reduced space between professional experiences
+\begin{jobshort}{Associate Software Developer}{Dec 2021 – Mar 2024}
+\begin{itemize}[topsep=3pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
+  \item \textbf{Engineered and maintained web application} using Java and Oracle SQL, enhancing system uptime by \textbf{15\%}.
+  \item \textbf{Automated data extraction scripts in SQL and SAP}, eliminating \textbf{30 hours/month} of manual effort.
+  \item \textbf{Delivered 24/7 production support}, resolving critical issues within \textbf{5 hours} on average and earning the \textbf{ACE award}.
+  \item \textbf{Led API development and system integration efforts}, enhancing data flow efficiency by \textbf{25\%}.
+  \item \textbf{Oversaw end-to-end delivery of backend modules}, enabling on-time Agile sprint releases.
+\end{itemize}
+\end{jobshort}
+% slightly reduced space before projects
+\section{Projects}
+\textbf{Facial Mask Detection System using OpenCV, scikit-learn, and HAAR Cascades}\\[-2pt]
+\vspace{-10pt}
+\begin{itemize}[topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
+  \item Designed a computer vision model using HAAR Cascade classifiers for real-time face mask detection, \\reducing manual monitoring needs and saving approximately two security personnel hours per shift.
+  \item Authored a paper in IRJMETS (Vol.~3, Iss.~5, May~2021): \href{https://www.irjmets.com/uploadedfiles/paper/volume3/issue_5_may_2021/10773/1628083434.pdf}{View Paper}
+\end{itemize}
+\vspace{5pt} % reduced space before education
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+\textbf{Bachelor of Technology in Computer Science and Engineering} & & 2017 -- 2021 \\
+Madhav Institute of Technology and Science, Gwalior & & \textbf{7.26 CGPA} \\ [2pt] % Slight gap between degrees
+
+\textbf{Higher Secondary Education (Class XII)} & & 2016 \\
+Jawahar Navodaya Vidyalaya, Raisen & & \textbf{91.4\%} \\ [2pt]
+
+\textbf{Secondary Education (Class X)} & & 2014 \\
+Jawahar Navodaya Vidyalaya, Raisen & & \textbf{10 CGPA} \\
+\end{tabularx}
+ 
+\end{document}
