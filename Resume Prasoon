@@ -1,100 +1,105 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[scale=0.90]{geometry} % slightly smaller margins to reduce space
-\usepackage{url}
-\usepackage{parskip}
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{tabularx}
-\usepackage{enumitem}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.45in]{geometry}
 \usepackage{titlesec}
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{4pt}{2pt} % tighter spacing around sections
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\usepackage{fontawesome5}
-\usepackage{anyfontsize}
-\pagestyle{empty}
-\newenvironment{jobshort}[2]
-  {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-      \textbf{#1} & \hfill & #2\\[-6pt] % reduced vertical spacing here
-    \end{tabularx}
-  }
-  {}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Industry Gold-Standard Font Configuration (Helvetica Sans-Serif)
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Premium Executive Midnight Blue Color Definition
+\definecolor{executiveblue}{HTML}{1A365D}
+
+% Hyperref Configuration: Professional link integration without borders
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,         
+    pdfborder={0 0 0}      
+}
+
+% Global list settings for perfect text alignment
+\setlist[itemize]{leftmargin=0.15in, labelsep=0.5em, parsep=0pt, partopsep=0pt}
+
+% Section Formatting: Clean rule syntax and crisp hierarchy
+\titleformat{\section}{\large\bfseries\color{executiveblue}}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
 \begin{document}
-\fontsize{11.5pt}{13pt}\selectfont
-\sloppy
-% Header
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\LARGE{Prasoon Mishra} \\
-\href{https://github.com/darthlyvading}{\raisebox{-0.05\height}\faGithub\ GitHub} \quad | \quad
-\href{https://shorturl.at/nHsmT}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \quad | \quad
-\href{mailto:mishra.prasoon98@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ mishra.prasoon98@gmail.com} \quad | \quad
-\href{tel:+7999854901}{\raisebox{-0.05\height}\faMobile\ +7999854901}
-\end{tabularx}
-% reduced space after header
- 
-\section{Profile}
-Oracle PL/SQL Developer with 4 years of experience at Accenture
-Expert at architecting high-performance, reliable applications using Agile methodology and driving continuous improvement.
-Skilled in CI/CD pipeline orchestration, Git version control and Azure cloud deployments.
- 
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Programming Languages:} & Java, Java EE, PL/SQL, Oracle SQL, C/C++ \\
- 
-\textbf{Databases:} & Oracle SQL, MySQL \\
-\textbf{Tools:} & GitHub, Azure, Jenkins, SVN, PuTTY, WinSCP \\
-\textbf{Soft Skills:} & \parbox[t]{\hsize}{Exceptional business communication, stakeholder management, root-cause \\debugging, end-to-end accountability} \\
-\end{tabularx}
- 
-% reduced space after skills
- 
+\pagestyle{empty}
+\raggedright
+%--- HEADER ---
+\begin{center}
+    {\Huge \bfseries \color{executiveblue} SAVAN BARODIYA} \\ \vspace{2pt}
+    {\large \bfseries \color{black!85} Data Analyst | Business Analyst} \\ \vspace{3pt}
+    \small +91 9144411704 \ \textbar\ \href{mailto:savan.barodiya07@gmail.com}{savan.barodiya07@gmail.com} \ \textbar\ \href{https://www.linkedin.com/in/savan-barodiya-a5945824a/}{LinkedIn}
+\end{center}
+
+%--- SUMMARY ---
+\section{Summary}
+\noindent 
+Data Analyst with 5 years of experience in data extraction, statistical analysis, and data modeling to drive strategic business decisions. Orchestrated end-to-end ETL pipelines, engineered Python automation scripts, and developed interactive Power BI and Tableau dashboards to optimize operational efficiency and ensure rigorous compliance in financial reporting.
+%--- SKILLS ---
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, labelsep=0.5em, itemsep=0pt]
+    \item \textbf{Languages:} SQL, Python, PL/SQL, HTML, CSS, Java
+    \item \textbf{Analytics:} Python, Statistics, Data Modelling, A/B Testing, Root Cause Analysis (RCA), Predictive Modeling
+    \item \textbf{Databases:} MySQL, PostgreSQL, Oracle Database, Teradata
+    \item \textbf{Libraries:}  NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Statistics
+    \item \textbf{Tools \& BI:}  Tableau, Power BI, Advanced Excel, DAX, Power Query, SAS, SAP
+   \item \textbf{Certifications:} Tableau for Data Science, SQL for Data Analysis, Google AI Essentials
+\end{itemize}
+
+
+%--- EXPERIENCE ---
 \section{Professional Experience}
-\begin{jobshort}{Software Engineering Analyst}{Apr 2024 – Present}
-\begin{itemize}[topsep=3pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
-  \item \textbf{Spearheading a security initiative} to remediate Dependabot vulnerabilities flagged by GitHub, reducing vulnerabilities by \textbf{60\%} and strengthening application security.
-  \item \textbf{Architected and delivered end-to-end government compliance integration platform},\\ orchestrating data flow between client applications, third-party vendors, and government portals.\\
-    \textbf{Eliminated 100\%} manual processing, reduced data errors to zero, and achieved \textbf{a 3 fold performance \\improvement}.
-  \item \textbf{Built and deployed automated data processing pipeline} using Java 8+ Streams, Apache Commons CSV, and custom SQL builders,
-    \textbf{cut processing time from 7 days to less than 5 minutes} and processed \textbf{ over 10,000 records/month}.
-  \item \textbf{Systematically tuned 50+ SQL queries and stored procedures} with Oracle SQL Tuning Advisor and JDBC batching, delivering \textbf{40\% faster query execution} and decreased database load.
-  \item \textbf{Developed a comprehensive transaction monitoring system} leveraging Oracle DBMS\_SCHEDULER, Java Quartz, and Unix cron jobs;\\
-    \textbf{minimized manual oversight by 40\%} across \textbf{50+ client accounts} with real-time alerts.
+
+\vspace{4pt}
+\noindent \textbf{\color{executiveblue}\large Accenture} \hfill \textbf{Mar 2025 -- Present} \\
+\noindent \textit{Data Analyst} 
+\vspace{2pt}
+\begin{itemize}[itemsep=3pt, topsep=2pt]
+
+    \item Directed a 5-member team to optimize end-to-end procurement pipelines; architected Power BI, Tableau, and SQL solutions for critical data audits, achieving zero SLA breaches, \textbf{a 67\% improvement in vendor compliance, and \$500,000 in annual cost savings}.
+    
+   \item Developed interactive Power BI and Tableau dashboards utilizing advanced DAX and Power Query to \textbf{automate the reporting of 10+ strategic KPIs governing operational performance}, ensuring 100\% data accuracy for executive leadership.
+
+     \item Engineered a \textbf{Power Automate workflow to track vendor communication, automatically triggering follow-up emails} for non-responses after 3 days, reducing communication latency.
+    
+    \item Centralized disparate reporting systems by orchestrating ETL workflows across SAP, SAS, and Teradata, successfully reducing manual operational \textbf{efforts by 23 hours per week}.
+    
+    \item Automated data validation and reconciliation of 10,000+ monthly invoices using Python scripts, \textbf{minimizing manual effort and driving a 60\% increase in operational efficiency}.
+    
+    \item Mitigated the risk of \textbf{compliance violations by 70\% by managing SAP role compliance and financial authority approvals,} ensuring 100\% adherence to financial controls for quarterly audits.  
+
 \end{itemize}
-\end{jobshort}
-% reduced space between professional experiences
-\begin{jobshort}{Associate Software Developer}{Dec 2021 – Mar 2024}
-\begin{itemize}[topsep=3pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
-  \item \textbf{Engineered and maintained web application} using Java and Oracle SQL, enhancing system uptime by \textbf{15\%}.
-  \item \textbf{Automated data extraction scripts in SQL and SAP}, eliminating \textbf{30 hours/month} of manual effort.
-  \item \textbf{Delivered 24/7 production support}, resolving critical issues within \textbf{5 hours} on average and earning the \textbf{ACE award}.
-  \item \textbf{Led API development and system integration efforts}, enhancing data flow efficiency by \textbf{25\%}.
-  \item \textbf{Oversaw end-to-end delivery of backend modules}, enabling on-time Agile sprint releases.
+
+\vspace{6pt}
+\noindent \textbf{\color{executiveblue}\large Infosys} \hfill \textbf{Dec 2021 -- Mar 2025} \\
+\noindent \textit{Senior Systems Engineer}
+\vspace{2pt}
+\begin{itemize}[itemsep=3pt, topsep=2pt]
+    \item Optimized procedures for extracting account positions and transactions via indexing strategies and Explain Plan tuning across diverse tables, \textbf{enhancing query performance by 30\%.}
+    
+    \item Processed and transformed \textbf{1M+ records into a robust centralized data warehouse utilizing advanced SQL and Excel;} established comprehensive data element documentation to guarantee data integrity for 3 cross-functional teams.
+
+    \item Executed in-depth code reviews utilizing SecureCRT and SQL to detect \& resolve database anomalies such as \textbf{missing primary keys and duplicate records, improving overall database performance by 60\%.}
+    
+     \item Redesigned and administered a database in pgAdmin4, creating and modifying tables, \textbf{SQL functions and procedures} to meet client requirements, leading to 29\% increase in data processing.
+     
+     \item Facilitated the Digital Engagement Hub migration by standardizing \textbf{API testing and deployment processes using Postman, GitHub, PostgreSQL, Docker, and Kubernetes,} driving a 20\% boost in cross-platform integration efficiency.
+     
 \end{itemize}
-\end{jobshort}
-% slightly reduced space before projects
-\section{Projects}
-\textbf{Facial Mask Detection System using OpenCV, scikit-learn, and HAAR Cascades}\\[-2pt]
-\vspace{-10pt}
-\begin{itemize}[topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1em]
-  \item Designed a computer vision model using HAAR Cascade classifiers for real-time face mask detection, \\reducing manual monitoring needs and saving approximately two security personnel hours per shift.
-  \item Authored a paper in IRJMETS (Vol.~3, Iss.~5, May~2021): \href{https://www.irjmets.com/uploadedfiles/paper/volume3/issue_5_may_2021/10773/1628083434.pdf}{View Paper}
-\end{itemize}
-\vspace{5pt} % reduced space before education
+
+
+
+%--- EDUCATION ---
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X r@{}}
-\textbf{Bachelor of Technology in Computer Science and Engineering} & & 2017 -- 2021 \\
-Madhav Institute of Technology and Science, Gwalior & & \textbf{7.26 CGPA} \\ [2pt] % Slight gap between degrees
+\vspace{2pt}
+\noindent \textbf{University Institute of Technology, RGPV Bhopal} \hfill \textbf{2017 – 2021} \\
+\textit{Bachelor of Technology}
 
-\textbf{Higher Secondary Education (Class XII)} & & 2016 \\
-Jawahar Navodaya Vidyalaya, Raisen & & \textbf{91.4\%} \\ [2pt]
-
-\textbf{Secondary Education (Class X)} & & 2014 \\
-Jawahar Navodaya Vidyalaya, Raisen & & \textbf{10 CGPA} \\
-\end{tabularx}
- 
 \end{document}
